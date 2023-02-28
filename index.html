@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [6, 34, 67, 28, 89, 496, 1234, 1000];
+        let perfect = [];
+        for (i = 0; i < array.length; i++) {
+            let number = array[i];
+            var v = 0;
+            for (j = 1; j <= number; j++) {
+                if (number % j == 0) {
+                    v += j;
+                }
+            }
+            if (v / 2 === number && v !== 0) {
+                perfect.push(number);
+            }
+        }
+
+        console.log(array);
+        console.log(perfect);
+    </script>
+</body>
+
+</html>
